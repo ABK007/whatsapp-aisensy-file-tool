@@ -28,5 +28,8 @@ def st_select_multiple_files():
             except Exception as e:
                 st.error(f"following error occurred: {e}")
                 
-    return combined_df
+        return combined_df
+    
+    else:
+        return None  # Return None if no files are uploaded
                 
