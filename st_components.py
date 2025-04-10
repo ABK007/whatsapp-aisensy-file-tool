@@ -13,13 +13,11 @@ def st_select_multiple_files():
 
     if uploaded_files:
         st.write(f"Total files uploaded: {len(uploaded_files)}")
-        for uploaded_file in uploaded_files:
-            st.write(f"Filename: {uploaded_file.name}")
-            
+        for uploaded_file in uploaded_files:            
             try:
                 # Process each file; assuming it's a CSV file
                 df = pd.read_csv(uploaded_file)
-                st.write(f"Preview of {uploaded_file.name}:")
+                st.write(f"#### Uploaded file preview: {uploaded_file.name}")
                 st.dataframe(df.head())
                 
                 # add and combine the dataframes to the list
